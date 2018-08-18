@@ -16,10 +16,10 @@ img:hover {
     transition: all 0.6s;
 }
 
-.icon-hidden {
+.hidden-in-image{
     opacity: 0 !important;
 }
-.icon-hidden:hover {
+.hidden-in-image:hover {
     opacity: 1 !important;
 }
 .close {
@@ -29,7 +29,16 @@ img:hover {
     z-index: 1000;
     height: 30px;
     width: 30px;
-    opacity: 1;
+}
+
+.info {
+    position: absolute;
+    z-index: 1001;
+    top: 0%;
+    right: 30%;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 30px;
 }
 
 @media only screen and (min-width: 600px) {

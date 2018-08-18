@@ -29,7 +29,7 @@ export class Image extends PureComponent {
         const { hovered, isDeleted } = this.state;
         return (
             <div className={`image-container ${isDeleted ? 'hidden' : null}`}>
-                <i className={`fas fa-times close ${!hovered ? 'icon-hidden' : null}`} onClick={this.handleDelete}/>
+                <i className={`fas fa-times close ${!hovered ? 'hidden-in-image' : null}`} onClick={this.handleDelete}/>
                 <img
                     className="hover"
                     src={src}
@@ -38,8 +38,8 @@ export class Image extends PureComponent {
                     onMouseLeave={this.handleHover}
                     ref={ref => (this.image = ref)}
                 />
-                <div className="hover">
-                    <p className="info hidden">{author}</p>
+                <div className={`info ${!hovered ? 'hidden-in-image' : null}`}>
+                    <p>{author}</p>
                 </div>
             </div>
         );
